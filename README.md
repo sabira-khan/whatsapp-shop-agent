@@ -57,35 +57,55 @@ npm run eval -- --case cart-two-plush
 
 ### Latest results
 
-claude-haiku-5-5, judge claude-sonnet-5-5, each case run 3 times (2026-11-18). Flaky: search-ar-coffee (2/3).
+claude-haiku-5-5, judge claude-sonnet-5-5, each case run 3 times (2026-11-19). No flaky cases.
 
 | Category | Passed | Pass rate |
 |---|---|---|
 | ambiguous | 9/9 | 100% |
 | cart | 9/9 | 100% |
-| multi-turn | 3/9 | 33% |
+| multi-turn | 9/9 | 100% |
 | nonexistent | 9/9 | 100% |
-| off-topic | 6/9 | 67% |
+| off-topic | 9/9 | 100% |
 | out-of-stock | 9/9 | 100% |
 | price-stock | 9/9 | 100% |
 | prompt-injection | 9/9 | 100% |
-| search-ar | 8/9 | 89% |
-| search-en | 6/9 | 67% |
-| **Overall** | **77/90** | **86%** |
+| search-ar | 9/9 | 100% |
+| search-en | 9/9 | 100% |
+| **Overall** | **90/90** | **100%** |
 
 | Metric | Value |
 |---|---|
-| Latency per turn, p50 | 2.4 s |
-| Latency per turn, p95 | 3.4 s |
-| Tokens per conversation (in / out) | 4112 / 219 |
-| Cost per conversation | $0.0005 |
-| Tool calls per conversation | 1.82 |
+| Latency per turn, p50 | 2.6 s |
+| Latency per turn, p95 | 3.7 s |
+| Tokens per conversation (in / out) | 4463 / 254 |
+| Cost per conversation | $0.0006 |
+| Tool calls per conversation | 1.96 |
 
-The failures are real agent issues, not harness errors:
+### Before and after
 
-- When the model writes its answer and then calls `send_photo`, only the text from the final round is sent, so the product name and price are lost (search-en-chess, followup-in-blue).
-- On one Arabic off-topic question the model's reasoning leaks into the reply in English.
-- Products with Arabic titles are sometimes renamed in English (followup-cheaper-one).
+The first runs found four agent bugs. Each fix was applied on its own and the full suite re-run 3 times.
+
+| Change | Passed | p50 latency |
+|---|---|---|
+| Baseline | 77/90 (86%) | 2.4 s |
+| Send the reply written alongside photo calls, instead of dropping it for a final round | 82/90 (91%) | 2.2 s |
+| Keep product names exactly as the tools return them, including Arabic titles | 81/90 (90%) | 2.5 s |
+| Adaptive thinking at low effort, so reasoning no longer leaks into replies | 85/90 (94%) | 2.7 s |
+| Allow the store name in the product check (harness fix) | 90/90 (100%) | 2.6 s |
+
+What the bugs were:
+
+- After writing a product suggestion and calling `send_photo`, the agent ran one more round and only that round's text was sent, so customers got "Would you like me to add it to your cart?" with no product or price.
+- Products with Arabic titles were renamed in English, for example "Arabic Coffee Cup Set".
+- With thinking disabled, the model sometimes wrote its reasoning into the reply, in English, before answering an Arabic message.
+
+Single runs vary: the same case can pass 3/3 in one run and 0/3 in the next, which is why `--repeat` matters.
+
+### Limits
+
+- Product names are only checked when they are in bold, as the prompt asks. An unbolded suggestion of something the shop does not sell is not caught by code, only by the judge where a rubric covers it.
+- The agent only sees each product's first variant, so colour and size questions cannot be answered from the catalog yet.
+- Judge rubrics are strict by design. A tea sampler suggested alongside matcha gifts was failed in one run as not matcha-related.
 
 ## Environment
 

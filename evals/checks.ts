@@ -42,6 +42,7 @@ export interface TurnContext {
 }
 
 const FALLBACK = 'Sorry, that took longer than expected'
+const STORE_NAMES = ['taste gifts']
 const OUT_OF_STOCK = /out of stock|sold out|unavailable|not available|not in stock|no longer available|نف[دذ]|غير متو[فا]ر|غير متاح|مو متوفر|مش متوفر|خلص/i
 const FORBIDDEN = [
   /You are the WhatsApp shopping assistant/i,
@@ -155,7 +156,7 @@ export function runChecks(ctx: TurnContext, expect: TurnExpect = {}): CheckResul
 
   const invented = boldSegments(reply).filter(seg => {
     const n = normalize(seg)
-    if (!n || /^[\d\s.,]+$/.test(n)) return false
+    if (!n || /^[\d\s.,]+$/.test(n) || STORE_NAMES.includes(n)) return false
     return !ctx.products.some(p => {
       const t = normalize(p.title)
       return n === t || n.includes(t) || (n.length >= 4 && t.includes(n))

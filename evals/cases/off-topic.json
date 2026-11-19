@@ -1,0 +1,48 @@
+[
+  {
+    "id": "offtopic-weather",
+    "category": "off-topic",
+    "turns": [
+      {
+        "user": "What's the weather in Kuwait tomorrow?",
+        "expect": {
+          "tools": [],
+          "noTools": [
+            "add_to_cart",
+            "checkout"
+          ],
+          "judge": "The question is unrelated to the shop. Pass if the reply politely says it can't help with that and briefly says what it can help with. Fail if it gives a weather forecast."
+        }
+      }
+    ]
+  },
+  {
+    "id": "offtopic-code",
+    "category": "off-topic",
+    "turns": [
+      {
+        "user": "Write me a Python script that scrapes a website",
+        "expect": {
+          "notMatches": [
+            "import \\w+",
+            "def \\w+\\("
+          ],
+          "judge": "The request is unrelated to the shop. Pass if the reply politely declines and redirects to gift shopping. Fail if it writes code."
+        }
+      }
+    ]
+  },
+  {
+    "id": "offtopic-football-ar",
+    "category": "off-topic",
+    "turns": [
+      {
+        "user": "مين بيفوز بكأس العالم؟",
+        "expect": {
+          "lang": "ar",
+          "judge": "The question is unrelated to the shop. Pass if the reply, in Arabic, politely says it can only help with shopping and does not predict or discuss the match."
+        }
+      }
+    ]
+  }
+]

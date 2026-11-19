@@ -1,0 +1,84 @@
+[
+  {
+    "id": "cart-chess-checkout",
+    "category": "cart",
+    "turns": [
+      {
+        "user": "Add the Walnut Chess Set to my cart",
+        "expect": {
+          "tools": [
+            {
+              "name": "add_to_cart",
+              "handle": "walnut-chess-set"
+            }
+          ]
+        }
+      },
+      {
+        "user": "send me the checkout link",
+        "expect": {
+          "tools": [
+            {
+              "name": "checkout"
+            }
+          ],
+          "matches": [
+            "https://fixture-shop\\.myshopify\\.com/cart/c/\\S+"
+          ]
+        }
+      }
+    ]
+  },
+  {
+    "id": "cart-two-plush",
+    "category": "cart",
+    "turns": [
+      {
+        "user": "Add 2 Camel Plush Toys and give me the checkout link",
+        "expect": {
+          "tools": [
+            {
+              "name": "add_to_cart",
+              "handle": "camel-plush-toy",
+              "quantity": 2
+            },
+            {
+              "name": "checkout"
+            }
+          ],
+          "matches": [
+            "https://fixture-shop\\.myshopify\\.com/cart/c/\\S+"
+          ]
+        }
+      }
+    ]
+  },
+  {
+    "id": "cart-remove",
+    "category": "cart",
+    "turns": [
+      {
+        "user": "Add the Cork Yoga Mat to my cart",
+        "expect": {
+          "tools": [
+            {
+              "name": "add_to_cart",
+              "handle": "cork-yoga-mat"
+            }
+          ]
+        }
+      },
+      {
+        "user": "actually remove it",
+        "expect": {
+          "tools": [
+            {
+              "name": "remove_from_cart",
+              "handle": "cork-yoga-mat"
+            }
+          ]
+        }
+      }
+    ]
+  }
+]

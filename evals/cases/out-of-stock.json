@@ -1,0 +1,59 @@
+[
+  {
+    "id": "oos-camera",
+    "category": "out-of-stock",
+    "turns": [
+      {
+        "user": "I want the Instant Film Camera",
+        "expect": {
+          "mentions": [
+            "instant-film-camera"
+          ],
+          "notMatches": [
+            "fixture-shop\\.myshopify\\.com/cart"
+          ],
+          "judge": "The product is out of stock. The reply says so clearly and offers an alternative or another way to help, without pushing the out-of-stock item."
+        }
+      }
+    ]
+  },
+  {
+    "id": "oos-prayer-mat-cart",
+    "category": "out-of-stock",
+    "turns": [
+      {
+        "user": "Add the Velvet Prayer Mat to my cart please",
+        "expect": {
+          "mentions": [
+            "velvet-prayer-mat"
+          ],
+          "noTools": [
+            "checkout"
+          ],
+          "notMatches": [
+            "fixture-shop\\.myshopify\\.com/cart"
+          ]
+        }
+      }
+    ]
+  },
+  {
+    "id": "oos-succulent-ar",
+    "category": "out-of-stock",
+    "turns": [
+      {
+        "user": "ضيف نباتات الصبار للسلة",
+        "expect": {
+          "noTools": [
+            "checkout"
+          ],
+          "lang": "ar",
+          "notMatches": [
+            "fixture-shop\\.myshopify\\.com/cart"
+          ],
+          "judge": "The customer asked in Arabic to add succulents to the cart. The succulent product is out of stock. Pass if the reply tells them it is unavailable and does not claim it was added."
+        }
+      }
+    ]
+  }
+]

@@ -9,7 +9,8 @@
   "scripts": {
     "chat": "tsx --env-file=.env scripts/chat.ts",
     "test": "tsx --test test/*.test.ts",
-    "typecheck": "tsc --noEmit"
+    "typecheck": "tsc --noEmit",
+    "eval": "tsx --env-file-if-exists=.env evals/run.ts"
   },
   "dependencies": {
     "@anthropic-ai/sdk": "^1.8.0",

@@ -1,0 +1,584 @@
+[
+  {
+    "handle": "hand-thrown-matcha-bowl",
+    "title": "Hand-Thrown Matcha Bowl",
+    "description": "A wheel-thrown stoneware chawan with a speckled glaze for slow morning tea.",
+    "category": "ceramics tea",
+    "keywords": [
+      "matcha",
+      "tea",
+      "bowl",
+      "ceramic"
+    ],
+    "image": "https://cdn.fixture-shop.test/hand-thrown-matcha-bowl.jpg",
+    "currency": "USD",
+    "variants": [
+      {
+        "id": "gid://shopify/ProductVariant/11",
+        "title": "Default",
+        "price": 38,
+        "available": true
+      }
+    ]
+  },
+  {
+    "handle": "ceremonial-matcha-kit",
+    "title": "Ceremonial Matcha Starter Kit",
+    "description": "Stone-ground ceremonial matcha with a bamboo whisk, scoop and sifter.",
+    "category": "tea",
+    "keywords": [
+      "matcha",
+      "tea",
+      "whisk",
+      "kit"
+    ],
+    "image": "https://cdn.fixture-shop.test/ceremonial-matcha-kit.jpg",
+    "currency": "USD",
+    "variants": [
+      {
+        "id": "gid://shopify/ProductVariant/21",
+        "title": "Default",
+        "price": 54,
+        "available": true
+      }
+    ]
+  },
+  {
+    "handle": "oud-amber-candle",
+    "title": "Oud & Amber Candle",
+    "description": "Hand-poured soy candle with notes of oud wood and warm amber.",
+    "category": "home fragrance",
+    "keywords": [
+      "candle",
+      "oud",
+      "amber",
+      "fragrance"
+    ],
+    "image": "https://cdn.fixture-shop.test/oud-amber-candle.jpg",
+    "currency": "USD",
+    "variants": [
+      {
+        "id": "gid://shopify/ProductVariant/31",
+        "title": "Default",
+        "price": 32,
+        "available": true
+      }
+    ]
+  },
+  {
+    "handle": "taif-rose-candle",
+    "title": "Taif Rose Soy Candle",
+    "description": "Soy candle scented with Taif rose and a touch of saffron.",
+    "category": "home fragrance",
+    "keywords": [
+      "candle",
+      "rose",
+      "floral",
+      "fragrance"
+    ],
+    "image": "https://cdn.fixture-shop.test/taif-rose-candle.jpg",
+    "currency": "USD",
+    "variants": [
+      {
+        "id": "gid://shopify/ProductVariant/41",
+        "title": "Default",
+        "price": 28,
+        "available": false
+      }
+    ]
+  },
+  {
+    "handle": "copper-bakhoor-burner",
+    "title": "مبخرة بخور نحاسية",
+    "description": "Hand-hammered copper incense burner for bakhoor and oud chips.",
+    "category": "home fragrance",
+    "keywords": [
+      "bakhoor",
+      "incense",
+      "burner",
+      "oud",
+      "copper"
+    ],
+    "image": "https://cdn.fixture-shop.test/copper-bakhoor-burner.jpg",
+    "currency": "USD",
+    "variants": [
+      {
+        "id": "gid://shopify/ProductVariant/51",
+        "title": "Default",
+        "price": 48,
+        "available": true
+      }
+    ]
+  },
+  {
+    "handle": "arabic-coffee-cups",
+    "title": "طقم فناجين قهوة عربية",
+    "description": "Set of six porcelain finjan cups with gold rims for Arabic coffee.",
+    "category": "coffee tableware",
+    "keywords": [
+      "arabic coffee",
+      "coffee",
+      "cups",
+      "finjan",
+      "gahwa"
+    ],
+    "image": "https://cdn.fixture-shop.test/arabic-coffee-cups.jpg",
+    "currency": "USD",
+    "variants": [
+      {
+        "id": "gid://shopify/ProductVariant/61",
+        "title": "Default",
+        "price": 39,
+        "available": true
+      }
+    ]
+  },
+  {
+    "handle": "brass-dallah",
+    "title": "Brass Dallah Coffee Pot",
+    "description": "Traditional brass dallah for serving Arabic coffee to guests.",
+    "category": "coffee tableware",
+    "keywords": [
+      "dallah",
+      "coffee",
+      "pot",
+      "brass",
+      "arabic coffee"
+    ],
+    "image": "https://cdn.fixture-shop.test/brass-dallah.jpg",
+    "currency": "USD",
+    "variants": [
+      {
+        "id": "gid://shopify/ProductVariant/71",
+        "title": "Default",
+        "price": 65,
+        "available": true
+      }
+    ]
+  },
+  {
+    "handle": "premium-dates-box",
+    "title": "علبة تمر فاخرة",
+    "description": "Premium Medjool and Sukkari dates in a wooden gift box.",
+    "category": "food",
+    "keywords": [
+      "dates",
+      "tamr",
+      "sweets",
+      "box"
+    ],
+    "image": "https://cdn.fixture-shop.test/premium-dates-box.jpg",
+    "currency": "USD",
+    "variants": [
+      {
+        "id": "gid://shopify/ProductVariant/81",
+        "title": "Default",
+        "price": 26,
+        "available": true
+      }
+    ]
+  },
+  {
+    "handle": "velvet-prayer-mat",
+    "title": "Velvet Prayer Mat",
+    "description": "Padded velvet prayer mat with a soft embroidered border.",
+    "category": "home",
+    "keywords": [
+      "prayer mat",
+      "sajada",
+      "velvet",
+      "ramadan"
+    ],
+    "image": "https://cdn.fixture-shop.test/velvet-prayer-mat.jpg",
+    "currency": "USD",
+    "variants": [
+      {
+        "id": "gid://shopify/ProductVariant/91",
+        "title": "Default",
+        "price": 35,
+        "available": false
+      }
+    ]
+  },
+  {
+    "handle": "linen-scarf",
+    "title": "Linen Scarf",
+    "description": "Lightweight washed linen scarf for warm evenings.",
+    "category": "accessories",
+    "keywords": [
+      "scarf",
+      "linen",
+      "fashion"
+    ],
+    "image": "https://cdn.fixture-shop.test/linen-scarf.jpg",
+    "currency": "USD",
+    "variants": [
+      {
+        "id": "gid://shopify/ProductVariant/101",
+        "title": "Sand",
+        "price": 42,
+        "available": true
+      },
+      {
+        "id": "gid://shopify/ProductVariant/102",
+        "title": "Blue",
+        "price": 42,
+        "available": true
+      },
+      {
+        "id": "gid://shopify/ProductVariant/103",
+        "title": "Olive",
+        "price": 42,
+        "available": false
+      }
+    ]
+  },
+  {
+    "handle": "leather-journal",
+    "title": "Leather Journal",
+    "description": "A5 refillable journal bound in vegetable-tanned leather.",
+    "category": "stationery",
+    "keywords": [
+      "journal",
+      "notebook",
+      "leather",
+      "writing",
+      "reader"
+    ],
+    "image": "https://cdn.fixture-shop.test/leather-journal.jpg",
+    "currency": "USD",
+    "variants": [
+      {
+        "id": "gid://shopify/ProductVariant/111",
+        "title": "Brown",
+        "price": 30,
+        "available": true
+      },
+      {
+        "id": "gid://shopify/ProductVariant/112",
+        "title": "Black",
+        "price": 30,
+        "available": true
+      }
+    ]
+  },
+  {
+    "handle": "stoneware-mug",
+    "title": "Stoneware Mug",
+    "description": "Large hand-glazed stoneware mug for coffee or karak.",
+    "category": "ceramics",
+    "keywords": [
+      "mug",
+      "coffee",
+      "tea",
+      "ceramic"
+    ],
+    "image": "https://cdn.fixture-shop.test/stoneware-mug.jpg",
+    "currency": "USD",
+    "variants": [
+      {
+        "id": "gid://shopify/ProductVariant/121",
+        "title": "White",
+        "price": 18,
+        "available": true
+      },
+      {
+        "id": "gid://shopify/ProductVariant/122",
+        "title": "Blue",
+        "price": 18,
+        "available": true
+      }
+    ]
+  },
+  {
+    "handle": "blue-note-jazz-vinyl",
+    "title": "Blue Note Jazz Vinyl Bundle",
+    "description": "Three classic Blue Note jazz records on 180g vinyl.",
+    "category": "music",
+    "keywords": [
+      "vinyl",
+      "jazz",
+      "records",
+      "music"
+    ],
+    "image": "https://cdn.fixture-shop.test/blue-note-jazz-vinyl.jpg",
+    "currency": "USD",
+    "variants": [
+      {
+        "id": "gid://shopify/ProductVariant/131",
+        "title": "Default",
+        "price": 75,
+        "available": true
+      }
+    ]
+  },
+  {
+    "handle": "vintage-film-poster",
+    "title": "Vintage Film Poster Print",
+    "description": "Museum-quality print of a classic 1950s film poster.",
+    "category": "art film",
+    "keywords": [
+      "film",
+      "movie",
+      "poster",
+      "cinema",
+      "print"
+    ],
+    "image": "https://cdn.fixture-shop.test/vintage-film-poster.jpg",
+    "currency": "USD",
+    "variants": [
+      {
+        "id": "gid://shopify/ProductVariant/141",
+        "title": "Default",
+        "price": 22,
+        "available": true
+      }
+    ]
+  },
+  {
+    "handle": "instant-film-camera",
+    "title": "Instant Film Camera",
+    "description": "Instant camera that prints credit-card sized photos.",
+    "category": "photography",
+    "keywords": [
+      "camera",
+      "instant",
+      "photo",
+      "polaroid"
+    ],
+    "image": "https://cdn.fixture-shop.test/instant-film-camera.jpg",
+    "currency": "USD",
+    "variants": [
+      {
+        "id": "gid://shopify/ProductVariant/151",
+        "title": "Default",
+        "price": 89,
+        "available": false
+      }
+    ]
+  },
+  {
+    "handle": "wireless-headphones",
+    "title": "Wireless Over-Ear Headphones",
+    "description": "Noise-cancelling wireless headphones with 30 hour battery.",
+    "category": "electronics",
+    "keywords": [
+      "headphones",
+      "music",
+      "audio",
+      "wireless"
+    ],
+    "image": "https://cdn.fixture-shop.test/wireless-headphones.jpg",
+    "currency": "USD",
+    "variants": [
+      {
+        "id": "gid://shopify/ProductVariant/161",
+        "title": "Default",
+        "price": 129,
+        "available": true
+      }
+    ]
+  },
+  {
+    "handle": "cork-yoga-mat",
+    "title": "Cork Yoga Mat",
+    "description": "Natural cork yoga mat with non-slip rubber base.",
+    "category": "wellness",
+    "keywords": [
+      "yoga",
+      "mat",
+      "fitness",
+      "wellness"
+    ],
+    "image": "https://cdn.fixture-shop.test/cork-yoga-mat.jpg",
+    "currency": "USD",
+    "variants": [
+      {
+        "id": "gid://shopify/ProductVariant/171",
+        "title": "Default",
+        "price": 58,
+        "available": true
+      }
+    ]
+  },
+  {
+    "handle": "brass-reading-lamp",
+    "title": "Brass Reading Lamp",
+    "description": "Adjustable brass desk lamp with warm LED light.",
+    "category": "home lighting",
+    "keywords": [
+      "lamp",
+      "reading",
+      "brass",
+      "light",
+      "reader"
+    ],
+    "image": "https://cdn.fixture-shop.test/brass-reading-lamp.jpg",
+    "currency": "USD",
+    "variants": [
+      {
+        "id": "gid://shopify/ProductVariant/181",
+        "title": "Default",
+        "price": 95,
+        "available": true
+      }
+    ]
+  },
+  {
+    "handle": "gulf-kitchen-cookbook",
+    "title": "Gulf Kitchen Cookbook",
+    "description": "Eighty home recipes from Kuwait, Bahrain and Oman.",
+    "category": "books food",
+    "keywords": [
+      "cookbook",
+      "recipes",
+      "cooking",
+      "book",
+      "reader"
+    ],
+    "image": "https://cdn.fixture-shop.test/gulf-kitchen-cookbook.jpg",
+    "currency": "USD",
+    "variants": [
+      {
+        "id": "gid://shopify/ProductVariant/191",
+        "title": "Default",
+        "price": 34,
+        "available": true
+      }
+    ]
+  },
+  {
+    "handle": "kuwait-skyline-puzzle",
+    "title": "1000-Piece Kuwait Skyline Puzzle",
+    "description": "Jigsaw puzzle of the Kuwait Towers at sunset.",
+    "category": "games",
+    "keywords": [
+      "puzzle",
+      "jigsaw",
+      "kuwait",
+      "games"
+    ],
+    "image": "https://cdn.fixture-shop.test/kuwait-skyline-puzzle.jpg",
+    "currency": "USD",
+    "variants": [
+      {
+        "id": "gid://shopify/ProductVariant/201",
+        "title": "Default",
+        "price": 24,
+        "available": true
+      }
+    ]
+  },
+  {
+    "handle": "musk-perfume-oil",
+    "title": "عطر مسك الطهارة",
+    "description": "White musk perfume oil in a crystal roll-on bottle.",
+    "category": "perfume",
+    "keywords": [
+      "musk",
+      "perfume",
+      "oil",
+      "attar",
+      "scent"
+    ],
+    "image": "https://cdn.fixture-shop.test/musk-perfume-oil.jpg",
+    "currency": "USD",
+    "variants": [
+      {
+        "id": "gid://shopify/ProductVariant/211",
+        "title": "Default",
+        "price": 45,
+        "available": true
+      }
+    ]
+  },
+  {
+    "handle": "camel-plush-toy",
+    "title": "Camel Plush Toy",
+    "description": "Soft plush camel toy for babies and kids.",
+    "category": "kids",
+    "keywords": [
+      "toy",
+      "plush",
+      "camel",
+      "kids",
+      "baby"
+    ],
+    "image": "https://cdn.fixture-shop.test/camel-plush-toy.jpg",
+    "currency": "USD",
+    "variants": [
+      {
+        "id": "gid://shopify/ProductVariant/221",
+        "title": "Default",
+        "price": 19,
+        "available": true
+      }
+    ]
+  },
+  {
+    "handle": "walnut-chess-set",
+    "title": "Walnut Chess Set",
+    "description": "Hand-carved walnut and maple chess set with folding board.",
+    "category": "games",
+    "keywords": [
+      "chess",
+      "board game",
+      "games",
+      "walnut"
+    ],
+    "image": "https://cdn.fixture-shop.test/walnut-chess-set.jpg",
+    "currency": "USD",
+    "variants": [
+      {
+        "id": "gid://shopify/ProductVariant/231",
+        "title": "Default",
+        "price": 110,
+        "available": true
+      }
+    ]
+  },
+  {
+    "handle": "karak-chai-sampler",
+    "title": "Karak & Chai Tea Sampler",
+    "description": "Six loose-leaf karak and masala chai blends.",
+    "category": "tea",
+    "keywords": [
+      "tea",
+      "karak",
+      "chai",
+      "sampler"
+    ],
+    "image": "https://cdn.fixture-shop.test/karak-chai-sampler.jpg",
+    "currency": "USD",
+    "variants": [
+      {
+        "id": "gid://shopify/ProductVariant/241",
+        "title": "Default",
+        "price": 21,
+        "available": true
+      }
+    ]
+  },
+  {
+    "handle": "succulent-trio",
+    "title": "Succulent Trio in Concrete Pots",
+    "description": "Three live succulents in hand-cast concrete pots.",
+    "category": "plants",
+    "keywords": [
+      "plants",
+      "succulent",
+      "cactus",
+      "pots"
+    ],
+    "image": "https://cdn.fixture-shop.test/succulent-trio.jpg",
+    "currency": "USD",
+    "variants": [
+      {
+        "id": "gid://shopify/ProductVariant/251",
+        "title": "Default",
+        "price": 36,
+        "available": false
+      }
+    ]
+  }
+]

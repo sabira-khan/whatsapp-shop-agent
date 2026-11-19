@@ -1,0 +1,54 @@
+[
+  {
+    "id": "price-dallah",
+    "category": "price-stock",
+    "turns": [
+      {
+        "user": "How much is the Brass Dallah Coffee Pot?",
+        "expect": {
+          "mentions": [
+            "brass-dallah"
+          ],
+          "matches": [
+            "\\b65\\b"
+          ]
+        }
+      }
+    ]
+  },
+  {
+    "id": "stock-rose-candle",
+    "category": "price-stock",
+    "turns": [
+      {
+        "user": "Is the Taif Rose Soy Candle in stock?",
+        "expect": {
+          "mentions": [
+            "taif-rose-candle"
+          ],
+          "matches": [
+            "out of stock|sold out|unavailable|not available|not in stock"
+          ]
+        }
+      }
+    ]
+  },
+  {
+    "id": "price-dates-ar",
+    "category": "price-stock",
+    "turns": [
+      {
+        "user": "كم سعر علبة تمر فاخرة؟",
+        "expect": {
+          "mentions": [
+            "premium-dates-box"
+          ],
+          "matches": [
+            "\\b26\\b"
+          ],
+          "lang": "ar"
+        }
+      }
+    ]
+  }
+]

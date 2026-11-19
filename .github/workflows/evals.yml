@@ -1,0 +1,39 @@
+name: evals
+
+on:
+  workflow_dispatch:
+    inputs:
+      repeat:
+        description: Runs per case
+        default: '1'
+      judge_model:
+        description: Judge model
+        default: claude-sonnet-5-5
+
+jobs:
+  evals:
+    runs-on: ubuntu-latest
+    timeout-minutes: 30
+    steps:
+      - uses: actions/checkout@v4
+
+      - uses: actions/setup-node@v4
+        with:
+          node-version: 22
+          cache: npm
+
+      - run: npm ci
+
+      - run: npm test
+
+      - run: npm run eval -- --repeat "${{ inputs.repeat }}" --judge-model "${{ inputs.judge_model }}" | tee eval-output.txt
+        env:
+          ANTHROPIC_API_KEY: ${{ secrets.ANTHROPIC_API_KEY }}
+
+      - run: sed -n '/^| Category/,/^| Tool calls/p' eval-output.txt >> "$GITHUB_STEP_SUMMARY"
+
+      - uses: actions/upload-artifact@v4
+        if: always()
+        with:
+          name: eval-results
+          path: evals/results/

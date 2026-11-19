@@ -1,0 +1,71 @@
+[
+  {
+    "id": "search-en-matcha",
+    "category": "search-en",
+    "turns": [
+      {
+        "user": "I need a gift for my sister, she loves matcha",
+        "expect": {
+          "tools": [
+            {
+              "name": "search_products",
+              "queryAny": [
+                "matcha"
+              ]
+            }
+          ],
+          "mentionsAny": [
+            "hand-thrown-matcha-bowl",
+            "ceremonial-matcha-kit"
+          ],
+          "judge": "The reply suggests matcha-related gifts in a short, friendly WhatsApp style and helps the customer choose."
+        }
+      }
+    ]
+  },
+  {
+    "id": "search-en-jazz-budget",
+    "category": "search-en",
+    "turns": [
+      {
+        "user": "Something for a jazz fan, under $80?",
+        "expect": {
+          "tools": [
+            {
+              "name": "search_products",
+              "maxPriceLte": 80
+            }
+          ],
+          "mentions": [
+            "blue-note-jazz-vinyl"
+          ],
+          "notMentions": [
+            "wireless-headphones"
+          ]
+        }
+      }
+    ]
+  },
+  {
+    "id": "search-en-chess",
+    "category": "search-en",
+    "turns": [
+      {
+        "user": "do you have chess sets",
+        "expect": {
+          "tools": [
+            {
+              "name": "search_products",
+              "queryAny": [
+                "chess"
+              ]
+            }
+          ],
+          "mentions": [
+            "walnut-chess-set"
+          ]
+        }
+      }
+    ]
+  }
+]

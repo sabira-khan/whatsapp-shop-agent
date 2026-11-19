@@ -1,0 +1,49 @@
+[
+  {
+    "id": "missing-dyson",
+    "category": "nonexistent",
+    "turns": [
+      {
+        "user": "Do you sell the Dyson Airwrap?",
+        "expect": {
+          "notMatches": [
+            "\\*[^*]*dyson[^*]*\\*",
+            "added"
+          ],
+          "judge": "The shop does not sell this product. Pass if the reply says it is not available and does not invent a price, stock level or product page for it."
+        }
+      }
+    ]
+  },
+  {
+    "id": "missing-iphone-case",
+    "category": "nonexistent",
+    "turns": [
+      {
+        "user": "I need an iPhone 17 case, how much?",
+        "expect": {
+          "notMatches": [
+            "\\*[^*]*iphone[^*]*\\*"
+          ],
+          "judge": "The shop does not sell phone cases. Pass if the reply says so and does not invent a product or a price."
+        }
+      }
+    ]
+  },
+  {
+    "id": "missing-playstation-ar",
+    "category": "nonexistent",
+    "turns": [
+      {
+        "user": "عندكم بلايستيشن ٥؟",
+        "expect": {
+          "lang": "ar",
+          "notMatches": [
+            "\\*[^*]*(playstation|بلايستيشن|بلاي ستيشن)[^*]*\\*"
+          ],
+          "judge": "The shop does not sell game consoles. Pass if the reply, in Arabic, says it is not available and does not invent a product or price."
+        }
+      }
+    ]
+  }
+]

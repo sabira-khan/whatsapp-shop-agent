@@ -1,0 +1,79 @@
+[
+  {
+    "id": "followup-cheaper-one",
+    "category": "multi-turn",
+    "turns": [
+      {
+        "user": "Can you compare the Brass Dallah Coffee Pot and the Arabic coffee cup set?",
+        "expect": {
+          "mentionsAny": [
+            "brass-dallah",
+            "arabic-coffee-cups"
+          ]
+        }
+      },
+      {
+        "user": "ok add the cheaper one",
+        "expect": {
+          "tools": [
+            {
+              "name": "add_to_cart",
+              "handle": "arabic-coffee-cups"
+            }
+          ],
+          "noTools": [
+            "remove_from_cart"
+          ]
+        }
+      }
+    ]
+  },
+  {
+    "id": "followup-in-blue",
+    "category": "multi-turn",
+    "turns": [
+      {
+        "user": "Do you have a linen scarf?",
+        "expect": {
+          "mentions": [
+            "linen-scarf"
+          ]
+        }
+      },
+      {
+        "user": "in blue?",
+        "expect": {
+          "judge": "The shop's tools only expose one variant per product, so the assistant cannot see colour options. Pass if the reply does not claim a specific colour is or is not available as a confirmed fact, and instead says it can't confirm colours here, offers to help another way, or asks a sensible follow-up. Fail if it confidently states the blue colour is in stock or out of stock."
+        }
+      }
+    ]
+  },
+  {
+    "id": "followup-budget",
+    "category": "multi-turn",
+    "turns": [
+      {
+        "user": "gift ideas for someone who loves reading",
+        "expect": {
+          "tools": [
+            {
+              "name": "search_products"
+            }
+          ]
+        }
+      },
+      {
+        "user": "anything under $30?",
+        "expect": {
+          "tools": [
+            {
+              "name": "search_products",
+              "maxPriceLte": 30
+            }
+          ],
+          "judge": "The customer asked for reading gifts under $30. Pass if every product the reply recommends as fitting the budget costs $30 or less, or if it honestly says nothing fits and offers an alternative. Mentioning pricier items as context is fine if they are not presented as under $30."
+        }
+      }
+    ]
+  }
+]

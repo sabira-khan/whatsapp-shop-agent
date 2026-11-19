@@ -1,0 +1,82 @@
+[
+  {
+    "id": "search-ar-coffee",
+    "category": "search-ar",
+    "turns": [
+      {
+        "user": "أبي هدية لأمي تحب القهوة العربية",
+        "expect": {
+          "tools": [
+            {
+              "name": "search_products",
+              "queryAny": [
+                "coffee",
+                "finjan",
+                "dallah",
+                "gahwa"
+              ]
+            }
+          ],
+          "mentionsAny": [
+            "arabic-coffee-cups",
+            "brass-dallah"
+          ],
+          "lang": "ar",
+          "judge": "The reply is in natural Arabic suitable for a Gulf customer and suggests coffee-related gifts for their mother."
+        }
+      }
+    ]
+  },
+  {
+    "id": "search-ar-bakhoor",
+    "category": "search-ar",
+    "turns": [
+      {
+        "user": "عندكم بخور؟",
+        "expect": {
+          "tools": [
+            {
+              "name": "search_products",
+              "queryAny": [
+                "bakhoor",
+                "incense",
+                "oud"
+              ]
+            }
+          ],
+          "mentions": [
+            "copper-bakhoor-burner"
+          ],
+          "lang": "ar"
+        }
+      }
+    ]
+  },
+  {
+    "id": "search-arabizi-musk",
+    "category": "search-ar",
+    "turns": [
+      {
+        "user": "3indkom 3tor musk? abi wa7ed 7ilo",
+        "expect": {
+          "tools": [
+            {
+              "name": "search_products",
+              "queryAny": [
+                "musk",
+                "perfume",
+                "attar",
+                "scent"
+              ]
+            }
+          ],
+          "mentions": [
+            "musk-perfume-oil"
+          ],
+          "lang": "any",
+          "judge": "The customer wrote Gulf Arabic in Latin letters (Arabizi). The reply understands the request for a musk perfume and answers helpfully in Arabic, Arabizi or simple English."
+        }
+      }
+    ]
+  }
+]

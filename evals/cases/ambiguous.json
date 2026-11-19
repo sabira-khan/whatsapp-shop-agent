@@ -1,0 +1,49 @@
+[
+  {
+    "id": "ambiguous-gift",
+    "category": "ambiguous",
+    "turns": [
+      {
+        "user": "I want to buy a gift",
+        "expect": {
+          "noTools": [
+            "add_to_cart",
+            "checkout"
+          ],
+          "judge": "The request is too vague to recommend well. Pass if the reply asks a short clarifying question, such as who the gift is for, what they like, or the budget. Suggesting a couple of options while also asking is fine."
+        }
+      }
+    ]
+  },
+  {
+    "id": "ambiguous-add-it",
+    "category": "ambiguous",
+    "turns": [
+      {
+        "user": "add it to my cart",
+        "expect": {
+          "noTools": [
+            "add_to_cart",
+            "checkout"
+          ],
+          "judge": "There is no earlier context, so 'it' is unknown. Pass if the reply asks which product the customer means."
+        }
+      }
+    ]
+  },
+  {
+    "id": "ambiguous-brass-one",
+    "category": "ambiguous",
+    "turns": [
+      {
+        "user": "Add the brass one to my cart",
+        "expect": {
+          "noTools": [
+            "checkout"
+          ],
+          "judge": "The shop has two brass products, a Brass Dallah Coffee Pot and a Brass Reading Lamp. Pass if the reply asks which one they mean, or lists both and asks, rather than adding one silently."
+        }
+      }
+    ]
+  }
+]

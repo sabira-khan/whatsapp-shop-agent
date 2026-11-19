@@ -178,6 +178,11 @@ export function trimHistory(messages: Anthropic.MessageParam[], limit = HISTORY_
   return lastUser >= 0 ? messages.slice(lastUser) : []
 }
 
+function withoutThinking(message: Anthropic.MessageParam): Anthropic.MessageParam {
+  if (message.role !== 'assistant' || typeof message.content === 'string') return message
+  return { ...message, content: message.content.filter(b => b.type !== 'thinking' && b.type !== 'redacted_thinking') }
+}
+
 function textOf(content: Anthropic.ContentBlock[]) {
   return content.filter((b): b is Anthropic.TextBlock => b.type === 'text').map(b => b.text).join('\n').trim()
 }
@@ -196,7 +201,7 @@ export async function runAgent(text: string, session: Session, deps: AgentDeps):
     if (remaining < 1500) break
     await deps.meter?.check()
     const res = await deps.client.messages.create(
-      { model: deps.model ?? MODEL, max_tokens: 1024, thinking: { type: 'disabled' }, system: SYSTEM, tools: TOOLS, messages },
+      { model: deps.model ?? MODEL, max_tokens: 2048, thinking: { type: 'adaptive' }, output_config: { effort: 'low' }, system: SYSTEM, tools: TOOLS, messages },
       { timeout: remaining, maxRetries: 0 }
     )
     await deps.meter?.record({ inputTokens: res.usage.input_tokens, outputTokens: res.usage.output_tokens })
@@ -229,6 +234,6 @@ export async function runAgent(text: string, session: Session, deps: AgentDeps):
     reply = reply ? `${reply}\n\n${fallback}` : fallback
     messages.push({ role: 'assistant', content: fallback })
   }
-  next.messages = trimHistory(messages)
+  next.messages = trimHistory(messages.map(withoutThinking))
   return { reply, photos, session: next }
 }

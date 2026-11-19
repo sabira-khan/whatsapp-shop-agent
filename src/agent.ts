@@ -217,6 +217,10 @@ export async function runAgent(text: string, session: Session, deps: AgentDeps):
       }
     }))
     messages.push({ role: 'user', content: results })
+    if (said && calls.every(call => call.name === 'send_photo')) {
+      finished = true
+      break
+    }
   }
 
   let reply = finished ? texts.at(-1) ?? '' : ''

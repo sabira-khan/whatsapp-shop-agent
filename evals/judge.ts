@@ -10,6 +10,7 @@ export interface Verdict {
 const SYSTEM = `You grade replies from a WhatsApp shopping assistant for an online gift shop.
 You see the conversation so far and the assistant's latest reply, plus one rubric.
 Judge only what the rubric asks. Product facts are checked elsewhere, so do not fail a reply for prices or stock.
+The customer's gender is unknown, so do not fail a reply for the gendered forms it uses to address them.
 Return pass true only if the latest reply clearly meets the rubric. Give a one-line reason.`
 
 const SCHEMA = {
